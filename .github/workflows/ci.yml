@@ -5,7 +5,7 @@ on:
      -main
 jobs:
   package: # придумали сами
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3 #скопирует репозиторий на эту машинку
       - uses: actions/setup-java@v3
