@@ -1,0 +1,16 @@
+name: ci
+on:
+  push:
+     -master
+     -main
+jobs:
+  package: # придумали сами
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3 #скопирует репозиторий на эту машинку
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - run: mvn package #run - если пишем свою клманду, а не готовый чей-то action
+
