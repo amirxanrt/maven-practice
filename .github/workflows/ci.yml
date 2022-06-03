@@ -14,7 +14,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - run: mvn -B package #run - если пишем свою клманду, а не готовый чей-то action
-      - uses: action/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
           name: app # имя архива, который будет опубликован  на GitHub
           path: target/app.jar
